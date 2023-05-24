@@ -1,3 +1,9 @@
 # final-frontend
 
-starter code for CSCI 39548 final project
+CSCI 39548 final project
+
+Group members:
+- 
+-
+-
+- Carla Sanchez: CGSanchez-tech

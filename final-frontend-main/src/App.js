@@ -9,9 +9,13 @@ import {
   TaskContainer,
   AllEmployeesContainer,
   AllTasksContainer,
+  //NewEmployeeContainer,
   NewTaskContainer,
   EditTaskContainer
 } from './components/containers';
+
+import NewEmployeeContainer from './components/containers/NewEmployeeContainer';
+
 
 // if you create separate components for adding/editing 
 // a student or employee, make sure you add routes to those
@@ -26,9 +30,9 @@ const App = () => {
         <Route exact path="/employee/:id" component={EmployeeContainer} />
         <Route exact path="/tasks" component={AllTasksContainer} />
         <Route exact path="/newtask" component={NewTaskContainer} />
+        <Route exact path="/newemployee" component={NewEmployeeContainer} />
         <Route exact path="/task/:id" component={TaskContainer} />
         <Route exact path="/edittask/:id" component={EditTaskContainer} />
-
       </Switch>        
     </div>
   );
