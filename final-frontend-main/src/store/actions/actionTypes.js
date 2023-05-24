@@ -6,6 +6,9 @@ export const FETCH_ALL_EMPLOYEES = "FETCH_ALL_EMPLOYEES";
 //Single campus
 export const FETCH_EMPLOYEE = "FETCH_EMPLOYEE";
 
+//add employee
+export const ADD_EMPLOYEE = "ADD_EMPLOYEE";
+
 //All students
 export const FETCH_ALL_TASKS = "FETCH_ALL_TASKS";
 export const ADD_TASK = "ADD_TASK";

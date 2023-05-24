@@ -20,8 +20,8 @@ const NewEmployeeView = (props) => {
             <br />
             <br />
   
-            <label style={{ color: '#11153e', fontWeight: 'bold' }}>Email: </label>
-            <input type="text" name="email" onChange={(e) => handleChange(e)} />
+            <label style={{ color: '#11153e', fontWeight: 'bold' }}>Department: </label>
+            <input type="text" name="department" onChange={(e) => handleChange(e)} />
             <br />
             <br />
   

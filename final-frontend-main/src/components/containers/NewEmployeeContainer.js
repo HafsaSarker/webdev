@@ -11,7 +11,7 @@ class NewEmployeeContainer extends Component {
     this.state = {
       name: "",
       position: "",
-      email: "",
+      department: "",
       redirect: false,
       redirectId: null,
       error: ""
@@ -26,14 +26,14 @@ class NewEmployeeContainer extends Component {
 
   handleSubmit = async event => {
     event.preventDefault();
-    if (this.state.name === "") {
-      this.setState({ error: "Name field is required" });
-      return;
-    }
+    // if (this.state.name === "") {
+    //   this.setState({ error: "Name field is required" });
+    //   return;
+    // }
     let employee = {
       name: this.state.name,
       position: this.state.position,
-      email: this.state.email
+      department: this.state.department
     };
 
     let newEmployee = await this.props.addEmployee(employee);
