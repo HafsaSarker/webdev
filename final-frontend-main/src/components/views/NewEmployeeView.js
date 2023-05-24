@@ -1,4 +1,5 @@
 const NewEmployeeView = (props) => {
+  console.log(props)
     const { handleChange, handleSubmit, error } = props;
   
     return (

@@ -31,6 +31,9 @@ const AllEmployeesView = (props) => {
             </Link>
             <p>{employee.department}</p>
             <button onClick={() => handleDeleteEmployee(employee.id)}>X</button>
+            <Link to={`/newEmployee`}>
+              <button>Add New Employee</button> 
+            </Link>
           </div>
         );
       })}

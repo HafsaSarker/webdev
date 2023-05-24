@@ -30,12 +30,13 @@ class NewEmployeeContainer extends Component {
     //   this.setState({ error: "Name field is required" });
     //   return;
     // }
+
     let employee = {
-      name: this.state.name,
-      position: this.state.position,
+      firstname: this.state.firstname,
+      lastname: this.state.lastname,
       department: this.state.department
     };
-
+    console.log(employee)
     let newEmployee = await this.props.addEmployee(employee);
 
     this.setState({
@@ -43,6 +44,7 @@ class NewEmployeeContainer extends Component {
       redirectId: newEmployee.id,
       error: ""
     });
+    
   }
 
   componentWillUnmount() {
