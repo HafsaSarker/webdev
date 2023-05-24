@@ -1,10 +1,10 @@
 # Fullstack CRUD Application
 
 ## Teammates { 
-    Hafsa Sarker,
-    Jannatun Nazifa,
-    Carla Sanchez,
-    Jianfu Jiang
+    Hafsa Sarker @HafsaSarker,
+    Jannatun Nazifa @JannatunNazifa,
+    Carla Sanchez @CGSanchez-tech,
+    Jianfu Jiang @AnWings
 } 
 
 ### Description: 
