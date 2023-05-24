@@ -1,18 +1,18 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllInstructorsThunk } from "../../store/thunks";
-import { AllInstructorsView } from "../views";
+import { fetchAllEmployeesThunk } from "../../store/thunks";
+import { AllEmployeesView } from "../views";
 
-function AllInstructorsContainer() {
-  const allInstructors = useSelector((state) => state.allInstructors);
+function AllEmployeesContainer() {
+  const allEmployees = useSelector((state) => state.allEmployees);
   const dispatch = useDispatch();
 
   //replaces componentDidMount
   useEffect(() => {
-    dispatch(fetchAllInstructorsThunk());
+    dispatch(fetchAllEmployeesThunk());
   }, [dispatch]);
 
-  return <AllInstructorsView allInstructors={allInstructors} />;
+  return <AllEmployeesView allEmployees={allEmployees} />;
 }
 
-export default AllInstructorsContainer;
+export default AllEmployeesContainer;
