@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-import NewCourseView from '../views/NewCourseView';
+import NewCourseView from '../views/NewTaskView';
 import { addCourseThunk } from '../../store/thunks';
 
 
