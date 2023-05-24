@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
-const AllCoursesView = (props) => {
-  let {courses, deleteCourse} = props;
-  //courses = [{id: 300, title: "hello"}]
-  if (!courses.length) {
+const AllTasksView = (props) => {
+  let {tasks, deleteTask} = props;
+  //tasks = [{id: 300, title: "hello"}]
+  if (!tasks.length) {
     return (
     <div>
-      <p>There are no courses.</p>
-      <Link to={`/newcourse`}>
-        <button>Add New Course</button>
+      <p>There are no tasks.</p>
+      <Link to={`/newtask`}>
+        <button>Add New Task</button>
       </Link>
     </div>
     );
@@ -16,24 +16,24 @@ const AllCoursesView = (props) => {
   
   return (
     <div>
-      {courses.map((course) => {
-        let title = course.title;
+      {tasks.map((task) => {
+        let title = task.title;
         return (
-          <div key={course.id}>
-          <Link to={`/course/${course.id}`}>
+          <div key={task.id}>
+          <Link to={`/task/${task.id}`}>
             <h1>{title}</h1>
           </Link>
-          <button onClick={() => deleteCourse(course.id)}>Delete</button>
+          <button onClick={() => deleteTask(task.id)}>Delete</button>
           </div>
         );
       }
       )}
-      <Link to={`/newcourse`}>
-        <button>Add New Course</button>
+      <Link to={`/newtask`}>
+        <button>Add New Task</button>
       </Link>
     </div>
   );
 };
 
 
-export default AllCoursesView;
+export default AllTasksView;
