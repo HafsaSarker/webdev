@@ -44,6 +44,7 @@ export const deleteEmployeeThunk = (employeeId) => async (dispatch) => {
     await axios.delete(`${path}/employees/${employeeId}`);
     // Delete successful, so update state with dispatch
     dispatch(ac.deleteEmployee(employeeId));
+    window.location = "/employees"; 
 
   } catch (err) {
     console.error(err);
