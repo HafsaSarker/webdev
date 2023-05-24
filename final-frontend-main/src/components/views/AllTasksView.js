@@ -3,13 +3,14 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const AllTasksView = (props) => {
+  // console.log(props.tasks)
   const handleDeleteTask = (taskId) => {
     // Call the deleteTask function passed as a prop
     props.deleteTask(taskId);
   };
 
   let { tasks } = props;
-
+  
   if (!tasks.length) {
     return (
       <div>
@@ -24,7 +25,7 @@ const AllTasksView = (props) => {
   return (
     <div>
       {tasks.map((task) => {
-        let title = task.title;
+        let title = task.description;
         return (
           <div key={task.id}>
             <Link to={`/task/${task.id}`}>
