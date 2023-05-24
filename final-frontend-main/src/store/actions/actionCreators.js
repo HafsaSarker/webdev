@@ -20,6 +20,15 @@ export const fetchEmployee = (employee) => {
   };
 };
 
+//add employee
+export const addEmployee = (employee) => {
+  return {
+    type: at.ADD_EMPLOYEE,
+    payload: employee,
+  };
+};
+
+//delete employee
 export const deleteEmployee = (employeeId) => {
   return {
     type: at.DELETE_EMPLOYEE,

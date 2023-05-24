@@ -9,8 +9,16 @@ const AllEmployeesView = (props) => {
   };
 
   if (!props.allEmployees.length) {
-    return <div>There are no employees.</div>;
+    return( <div>
+      <p>There are no employees.</p>
+      <Link to={`/newEmployee`}>
+        <button>Add New Employee</button> 
+      </Link>
+      </div>);
   }
+  /*
+  new employee doesn't exist yet
+  */
 
   return (
     <div>
