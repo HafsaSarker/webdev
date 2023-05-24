@@ -26,21 +26,10 @@ export const fetchEmployeeThunk = (id) => async (dispatch) => {
   }
 };
 
-// //adding employee
-// export const addEmployeeThunk = (employee) => async (dispatch) => {
-//   try {
-//     let res = await axios.post(`${path}/employees/${employee}`, employee);
-//     dispatch(ac.addEmployee(res.data));
-//     return res.data;}
-//   } catch(err) {
-//     console.error(err);
-//   }
-// };
-
 //adding employee
 export const addEmployeeThunk = (employee) => async (dispatch) => {
   try {
-    let res = await axios.post(`${path}/employees/${employee}`, employee);
+    let res = await axios.post(`${path}/employees`, employee);
     dispatch(ac.addEmployee(res.data));
     return res.data;
   } catch (err) {
@@ -55,6 +44,7 @@ export const deleteEmployeeThunk = (employeeId) => async (dispatch) => {
     await axios.delete(`${path}/employees/${employeeId}`);
     // Delete successful, so update state with dispatch
     dispatch(ac.deleteEmployee(employeeId));
+    window.location = "/employees"; 
 
   } catch (err) {
     console.error(err);

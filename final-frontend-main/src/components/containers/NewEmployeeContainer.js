@@ -26,16 +26,17 @@ class NewEmployeeContainer extends Component {
 
   handleSubmit = async event => {
     event.preventDefault();
-    // if (this.state.name === "") {
-    //   this.setState({ error: "Name field is required" });
-    //   return;
-    // }
+    if (!this.state.firstname ||  !this.state.lastname || !this.state.department) {
+      this.setState({ error: "All fields are required" });
+      return;
+    }
+
     let employee = {
-      name: this.state.name,
-      position: this.state.position,
+      firstname: this.state.firstname,
+      lastname: this.state.lastname,
       department: this.state.department
     };
-
+    console.log(employee)
     let newEmployee = await this.props.addEmployee(employee);
 
     this.setState({
@@ -43,6 +44,7 @@ class NewEmployeeContainer extends Component {
       redirectId: newEmployee.id,
       error: ""
     });
+    
   }
 
   componentWillUnmount() {
