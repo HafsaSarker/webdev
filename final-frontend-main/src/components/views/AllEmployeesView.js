@@ -16,9 +16,6 @@ const AllEmployeesView = (props) => {
       </Link>
       </div>);
   }
-  /*
-  new employee doesn't exist yet
-  */
 
   return (
     <div>

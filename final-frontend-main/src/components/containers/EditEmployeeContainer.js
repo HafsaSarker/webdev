@@ -17,7 +17,7 @@ class EditEmployeeContainer extends Component {
       this.state = {
         firstname : "",
         lastname: "",
-        email: "", //idk lol
+        department: "", 
         //employeeId : "",
         //description: "",
         //priorityLevel: "",

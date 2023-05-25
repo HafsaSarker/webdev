@@ -36,6 +36,17 @@ export const deleteEmployee = (employeeId) => {
   };
 };
 
+//edit employee - NEW
+export const editEmployee = (employeeId, firstName, lastName, department) => async (dispatch) => {
+  try {
+    const response = await axios.put(`/api/employees/${employeeId}`, { firstName, lastName, department });
+    const updatedEmployee = response.data;
+    dispatch({ type: ActionTypes.EDIT_EMPLOYEE, payload: updatedEmployee });
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 //All tasks
 export const fetchAllTasks = (tasks) => {
   return {
