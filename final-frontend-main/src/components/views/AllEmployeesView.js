@@ -16,9 +16,6 @@ const AllEmployeesView = (props) => {
       </Link>
       </div>);
   }
-  /*
-  new employee doesn't exist yet
-  */
 
   return (
     <div>
@@ -31,6 +28,11 @@ const AllEmployeesView = (props) => {
             </Link>
             <p>{employee.department}</p>
             <button onClick={() => handleDeleteEmployee(employee.id)}>X</button>
+
+            <Link to={`/editEmployee`}> {/*NEW*/}
+              <button>Edit</button> 
+            </Link>
+
           </div>
         );
       })}

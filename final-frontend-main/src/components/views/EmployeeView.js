@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const EmployeeView = (props) => {
-  const {employee, editTask, allTasks} = props;
+  const {employee, editEmployee, editTask, allTasks} = props;
   let assignedTasks = allTasks.filter(task => task.employeeId===employee.id);
   let availableTasks = allTasks.filter(task => task.employeeId!==employee.id);
   

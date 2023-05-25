@@ -9,12 +9,12 @@ class NewEmployeeContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      position: "",
-      department: "",
+      firstname: '',
+      lastname: '',
+      department: '', 
       redirect: false,
       redirectId: null,
-      error: ""
+      error: '',
     };
   }
 
