@@ -15,7 +15,8 @@ import {
 } from './components/containers';
 
 import NewEmployeeContainer from './components/containers/NewEmployeeContainer';
-import { editEmployee } from "./store/actions/actionCreators";
+//import { editEmployee } from "./store/actions/actionCreators";
+import EditEmployeeContainer from './components/containers/EditEmployeeContainer';
 
 
 // if you create separate components for adding/editing 
@@ -38,7 +39,7 @@ const App = () => {
         <Route exact path="/newtask" component={NewTaskContainer} />
         <Route exact path="/newemployee" component={NewEmployeeContainer} />
 
-        <Route exact path="/editemployee" component={editEmployeeContainer} />
+        <Route exact path="/editemployee" component={EditEmployeeContainer} />
 
         <Route exact path="/task/:id" component={TaskContainer} />
         <Route exact path="/edittask/:id" component={EditTaskContainer} />
