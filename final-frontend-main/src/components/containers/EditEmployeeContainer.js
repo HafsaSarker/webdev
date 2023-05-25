@@ -5,7 +5,7 @@ Display the updates without needing to refresh the page
 */
 
 // Import necessary dependencies and actions
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect, Link } from 'react-router-dom';
 
@@ -85,7 +85,7 @@ class EditEmployeeContainer extends Component {
           <br />
 
           <label style={{ color: '#11153e', fontWeight: 'bold' }}>Department: </label>
-          <input type="department" name="department" value={this.state.department} placeholder={employee.department} onChange={this.handleChange} />
+          <input type="text" name="department" value={this.state.department} placeholder={employee.department} onChange={this.handleChange} />
           <br />
 
           <button type="submit">

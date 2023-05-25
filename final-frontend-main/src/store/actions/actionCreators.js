@@ -5,6 +5,8 @@ import * as at from './actionTypes';
  * for each action type
  */
 
+
+
 // All employees
 export const fetchAllEmployees = (employees) => {
   return {
@@ -37,11 +39,19 @@ export const deleteEmployee = (employeeId) => {
 };
 
 
+// //edit employee
+// export const editEmployee = (employeeId) => {
+//   return {
+//     type: at.EDIT_EMPLOYEE,
+//     payload: employeeId,
+//   };
+// };
+
 //edit employee
-export const editEmployee = (employeeId) => {
+export const editEmployee = (employee) => {
   return {
     type: at.EDIT_EMPLOYEE,
-    payload: employeeId,
+    payload: employee,
   };
 };
 

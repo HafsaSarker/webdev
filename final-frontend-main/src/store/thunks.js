@@ -51,11 +51,20 @@ export const deleteEmployeeThunk = (employeeId) => async (dispatch) => {
   }
 };
 
-//edit employee
+// //edit employee
+// export const editEmployeeThunk = (employee) => async (dispatch) => {
+//   try {
+//     let res = await axios.put(`${path}/employees`, employee);
+//     //const updatedEmployee = response.data;
+//     dispatch(ac.editEmployee(res.data));
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
+
 export const editEmployeeThunk = (employee) => async (dispatch) => {
   try {
-    let res = await axios.put(`${path}/employees`, employee);
-    //const updatedEmployee = response.data;
+    let res = await axios.put(`${path}/employees/${employee.id}`, employee);
     dispatch(ac.editEmployee(res.data));
   } catch (error) {
     console.error(error);
